@@ -30,12 +30,19 @@ function win(userChoice, computerChoice) {
 }
 
 
-function lose() {
-
+function lose(userChoice, computerChoice) {
+    computerScore++;
+    userScoreSpan.innerHTML = userScore;
+    computerScoreSpan.innerHTML = computerScore;
+    const smallUserWord = 'user'.fontsize(3).sub();
+    const smallCompWord = 'comp'.fontsize(3).sub();
+    resultP.innerHTML = `${convertToWord(userChoice)}${smallUserWord} loses to ${convertToWord(computerChoice)}${smallCompWord} Aww sad day you lost!`;
 }
 
-function draw() {
-
+function draw(userChoice, computerChoice) {
+    const smallUserWord = 'user'.fontsize(3).sub();
+    const smallCompWord = 'comp'.fontsize(3).sub();
+    resultP.innerHTML = `${convertToWord(userChoice)}${smallUserWord} equals  ${convertToWord(computerChoice)}${smallCompWord} Whats to say its a draw!!!`;
 }
 
 function game(userChoice) {
