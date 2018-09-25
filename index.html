@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <header>
+        <h1>rock paper scissors</h1>
+    </header>
+
+    <div class="scoreboard">
+        <div id="user-label" class="badge">user</div>
+        <div id="computer-label" class="badge">comp</div>
+        <span id="user-score">0</span>:<span id="computer-score">0</span>
+        <!-- <span id="user3-score">0</span>:<span id="user4-score">0</span> -->
+
+    </div>
+
+    <div class="result">
+
+        <p> paper covers rock. you win!</p>
+
+    </div>
+
+    <div class="choice">
+        <div class="choices" id="r">
+            <img src="./images/rock.jpg" alt="rock image">
+        </div>
+
+        <div class="choices" id="p">
+            <img src="./images/paper.jpg" alt="paper image">
+        </div>
+
+        <div class="choices" id="s">
+            <img src="./images/scissors.jpg" alt="scissors image">
+        </div>
+    </div>
+
+    <p id="action-message">make your move.</p>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="./assets/javascript/rps.js"></script>
+
+</body>
+
+</html>
