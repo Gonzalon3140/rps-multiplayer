@@ -1,35 +1,39 @@
-let userScore = 0;
-let computerScore = 0;
-var userScoreSpan = document.getElementById('user-score');
-var computerScoreSpan = document.getElementById("computer-score");
-var scoreBoardDiv = document.querySelector(".scoreboard");
-var resultDIv = document.querySelector(".result");
-var rockDiv = document.getElementById('r');
-var paperDiv = document.getElementById('p');
-var scissorsDiv = document.getElementById('s');
+const userScore = 0;
+const computerScore = 0;
+const userScoreSpan = document.getElementById('user-score');
+const computerScoreSpan = document.getElementById("computer-score");
+const scoreBoardDiv = document.querySelector(".scoreboard");
+const resultDIv = document.querySelector(".result");
+const rockDiv = document.getElementById('r');
+const paperDiv = document.getElementById('p');
+const scissorsDiv = document.getElementById('s');
 
 function getComputerChoice() {
-    var choices = ['r', 'p', 's'];
-    console.log(Math.random());
+    const choices = ["r", "p", "s"];
+    const randomNumber = Math.floor(Math.random() * 3);
+    return choices[randomNumber];
 }
 
-getComputerChoice();
 
 function game(userChoice) {
-
+    const computerChoice = getComputerChoice();
+    console.log("user choice =>" + userChoice);
+    console.log('computer choice =>' + computerChoice);
 }
+
 
 
 function main() {
     rockDiv.addEventListener('click', function () {
-        game('r');
+        game('r')
     })
+
     paperDiv.addEventListener('click', function () {
-        game('p');
+        game('p')
     })
+
     scissorsDiv.addEventListener('click', function () {
-        game('s');
+        game("s")
     })
 }
-
 main();
