@@ -14,19 +14,28 @@ function getComputerChoice() {
     return choices[randomNumber];
 }
 
+function convertToWord(letter) {
+    if (letter === 'r') return "Rock";
+    if (letter === 'p') return "Paper";
+    return "Scissors";
+}
+
 function win(userChoice, computerChoice) {
     userScore++;
     userScoreSpan.innerHTML = userScore;
     computerScoreSpan.innerHTML = computerScore;
-    resultP.innerHTML = userChoice + "beats" + computerChoice + "You win!";
+    const smallUserWord = 'user'.fontsize(3).sub();
+    const smallCompWord = 'comp'.fontsize(3).sub();
+    resultP.innerHTML = `${convertToWord(userChoice)}${smallUserWord} beats ${convertToWord(computerChoice)}${smallCompWord} You are a Winner!`;
 }
 
+
 function lose() {
-    console.log('lost');
+
 }
 
 function draw() {
-    console.log('draw');
+
 }
 
 function game(userChoice) {
